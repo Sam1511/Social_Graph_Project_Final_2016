@@ -52,22 +52,21 @@
 <p>The first and most crucial part of this project was scraping (i.e. retrieving) the information of each course from the course database. The content of the course pages were retrived and structured segmentatiously by deparment taking advantage of the course base filter by department.Thereafter, it was matter of structuring this retrieved data, so it could become easily readible.</p>
 
 <p>Due to some irregularities with the data formatting on the webpages in the DTU coure base, some minor manual clean-ups where neccessary in order to make the further compuations go more smoothly.
-<em>Transposed image of how the complete dataframe looked like. In this alternate case each category of information is a row and each course is a column:</em></p>
+<em>Transposed image of how the complete dataframe looked like. In this alternate case each category of information is a row and each course is a column:</em>
+<a href="url"><img src="https://github.com/Sam1511/Social_Graph_Project_Final_2016/blob/master/webpageimages/table.JPG" align="left" height="48" width="48"></a></p>
+
+<h3>
+<a id="3-analysis-of-course-network" class="anchor" href="#3-analysis-of-course-network" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3. Analysis of Course Network</h3>
+
+<h4>
+<a id="network-of-courses-by-recommended-prerequisites" class="anchor" href="#network-of-courses-by-recommended-prerequisites" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Network of courses by recommended prerequisites</h4>
+
+<p>The first approach to handling the data was to create an overall network of all the courses found in the database. The link/connection between the courses would be based on their recommended prerequisites that could be find on each page. The references to other courses in recommended prerequisites were based on course numbers which simplified the network 
+generation method, especially by using the networkx library in Python. </p>
+
+<p><em>That network looks like this:</em></p>
 
 <p align="center">
-  <img src="https://github.com/Sam1511/Social_Graph_Project_Final_2016/blob/master/webpageimages/table.JPG" width="48&gt;
-&lt;/p&gt;
-
-&lt;h3&gt;3. Analysis of Course Network&lt;/h3&gt;
-
-&lt;h4&gt;Network of courses by recommended prerequisites&lt;/h4&gt;
-
-&lt;p&gt;The first approach to handling the data was to create an overall network of all the courses found in the database. The link/connection between the courses would be based on their recommended prerequisites that could be find on each page. The references to other courses in recommended prerequisites were based on course numbers which simplified the network 
-generation method, especially by using the networkx library in Python. &lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;That network looks like this:&lt;/em&gt;&lt;/p&gt;
-
-&lt;p align=">
   <img src="https://github.com/Sam1511/Social_Graph_Project_Final_2016/blob/master/webpageimages/course_networ_req.png">
 </p>
 
