@@ -4,5 +4,5 @@
 
 
 
-* **Look into the [explainer notebook](http://nbviewer.jupyter.org/github/Sam1511/project-for-social-graphs-study/blob/master/explainer_notebook-Copy4.ipynb) for all the process behind getting the data and subsequent data-analysis**
+* **Look into the [explainer notebook](http://nbviewer.jupyter.org/github/Sam1511/Social_Graph_Project_Final_2016/blob/master/explainer_notebook-Cleaned.ipynb) for all the process behind getting the data and subsequent data-analysis**
 
