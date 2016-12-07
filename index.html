@@ -40,7 +40,7 @@
 <p>So, the data that this project concerns itself with is data that can be scraped from the course database on DTU's website. The pages for each course contain information about Course number, Course name, Course responsible (teachers), Content, Learning objectives, Recommended prerequisites (other courses that should have been attended before attending a specific course), and much more. The search engine in the course database allows the user to filter their search for specific courses by study department which is how the course pages were segmented when we scraped the data. </p>
 
 <p align="center">
-  <img src="http://www.dtu.dk/-/media/Udvikling/dtu/logoer/dtulogo_colour.ashx?mh=100&amp;mw=460">
+  <img src="https://raw.githubusercontent.com/Sam1511/Social_Graph_Project_Final_2016/master/webpageimages/DTUlogoSmall_nobg.png">
 </p>
 
 <h3>
@@ -70,27 +70,27 @@ generation method, especially by using the networkx library in Python. </p>
 <p><em>That network looks like this:</em></p>
 
 <p align="center">
-  <img src="https://github.com/Sam1511/Social_Graph_Project_Final_2016/blob/master/webpageimages/course_networ_req.png">
+  <img src="https://raw.githubusercontent.com/Sam1511/Social_Graph_Project_Final_2016/master/webpageimages/course_networ_req.png">
 </p>
 
 <p>After generating the network, it is advantageous to utilize networkx to do some network analysis that would be telling of the relationship between courses and lead to interesting regarding the courses. 
 To get an overall intrepetation of the network, utilizing degree distrubution is advantageous.</p>
 
 <p><em>The degree distrubution</em>
-<img src="https://github.com/Sam1511/Social_Graph_Project_Final_2016/blob/master/webpageimages/Degree-distrubution.png" alt="Degree_dist"></p>
+<img src="https://raw.githubusercontent.com/Sam1511/Social_Graph_Project_Final_2016/master/webpageimages/Degree-distrubution.png" alt="Degree_dist"></p>
 
 <p>It can be seen in the plot that a majority of the nodes have degree 1 and the number of them is decreasing with higher degree. This can be interpreted  as a graph/netowkr with a lot of single nodes connected to one big cluster. We can also see that there is not a single node with a degree 0 which means that if we pick every single node there is always a path to all nodes in the network from that node.</p>
 
 <p>In this case we calculated the in-degrees and out-degrees, plotted it against each other, and eventually isolated outliers in that plot. The outliers would correspond to courses with a big disperatity between in-degrees and out-degrees with respect to out-degrees as the higher value. From an analytical standpoint this would indicate which courses are the most infuential on other courses around, so it would be courses that student's should strongly consider taking as they are of importance. </p>
 
 <p><em>Firstly, is the barplot of the in-degrees and out-degrees:</em>
-<img src="https://github.com/Sam1511/Social_Graph_Project_Final_2016/blob/master/webpageimages/bar_plots_of_degrees.png" alt="bar_plot"></p>
+<img src="https://raw.githubusercontent.com/Sam1511/Social_Graph_Project_Final_2016/master/webpageimages/bar_plots_of_degrees.png" alt="bar_plot"></p>
 
 <p><em>And the subsequent scatterplot:</em>
-<img src="https://github.com/Sam1511/Social_Graph_Project_Final_2016/blob/master/webpageimages/scatter_plot.png" alt="scatter"></p>
+<img src="https://raw.githubusercontent.com/Sam1511/Social_Graph_Project_Final_2016/master/webpageimages/scatter_plot.png" alt="scatter"></p>
 
 <p>_From the notebook: _
-The top 10 outliers in the scatterplot was the courses of:</p>
+The top outliers in the scatterplot was the courses of:</p>
 
 <ul>
 <li>Course number:  11080  has ingoing degree 0 and outdoing degree 15</li>
@@ -108,7 +108,7 @@ The top 10 outliers in the scatterplot was the courses of:</p>
 The top outlier in this plot was:</p>
 
 <p><em>The scatter plot of degree centralities:</em>
-<img src="https://github.com/Sam1511/Social_Graph_Project_Final_2016/blob/master/webpageimages/scatter_plot_cen.png" alt="deg_cen"></p>
+<img src="https://raw.githubusercontent.com/Sam1511/Social_Graph_Project_Final_2016/master/webpageimages/scatter_plot_cen.png" alt="deg_cen"></p>
 
 <p>_The outliers i.e. most influental courses: _</p>
 
@@ -149,12 +149,12 @@ The top outlier in this plot was:</p>
 <p>In regards to the shortest path we also tested out a hypothesis that states that DTU contain more base courses denoted by courses (nodes) that have the shortest path lenghts than courses that have longer shortest path lengths (advanced courses).</p>
 
 <p><em>A graph showing the frequency of shortest path lenghts:</em>
-<img src="https://github.com/Sam1511/Social_Graph_Project_Final_2016/blob/master/webpageimages/lenght_graph.png" alt="lenght_graph"></p>
+<img src="https://raw.githubusercontent.com/Sam1511/Social_Graph_Project_Final_2016/master/webpageimages/lenght_graph.png" alt="lenght_graph"></p>
 
 <p>The last part of our analysis work of the network was identifiying the communities that could be found within it. The interesting aspect of this is that that we supposedly already now the communities (i.e. departments) but the network analyis tools like the louvain-algorithm might denote a different outcome. This could be telling us about how well the distrubution of courses between departments is actually. </p>
 
 <p><em>The network with communities illustrated by color:</em>
-<img src="https://github.com/Sam1511/Social_Graph_Project_Final_2016/blob/master/webpageimages/communities_graph.png" alt="com_netw"></p>
+<img src="https://raw.githubusercontent.com/Sam1511/Social_Graph_Project_Final_2016/master/webpageimages/communities_graph.png" alt="com_netw"></p>
 
 <p>Firstly, we calculate the the assortativity of the undirected graph as a negative value ( -0.0667934917309). The negative value indicate that smiliar high-degree (important) courses do not show a  tendency to link to other high-degree nodes(courses).
 Lastly, we calculate the modularity as it can be compared to the modularity of the actual communities later, where the modularity was 0.8053529955</p>
@@ -164,14 +164,14 @@ Lastly, we calculate the modularity as it can be compared to the modularity of t
 <p>Another network was made using the pre-requisites but this version set the actual communities denoted by departments.</p>
 
 <p><em>The course network colored by departments:</em>
-<img src="https://github.com/Sam1511/Social_Graph_Project_Final_2016/blob/master/webpageimages/colored_network_communities.png" alt="color_net"></p>
+<img src="https://raw.githubusercontent.com/Sam1511/Social_Graph_Project_Final_2016/master/webpageimages/colored_network_communities.png" alt="color_net"></p>
 
 <p>Furthermore, networks for each department was created in order to calculate each department's (community) modularity to then collect at have a signle modularity value for the whole network <a href="https://github.com/Sam1511/Social_Graph_Project_Final_2016/tree/master/new_final_pic">Networks for each department</a>. 
 The overall modularity for the actual communities were 0.4492397651481369. The disparity(the other modularity is higher) between modularity values indicate that the departments are not the best way of defining the communities. 
 The modularity of the communities of the undirected version of the department based network was also higher (0.6853537981269512). </p>
 
 <p><em>The simplified colored network for courses by departments:</em>
-<img src="https://github.com/Sam1511/Social_Graph_Project_Final_2016/blob/master/webpageimages/department_fig.png" alt="color_netw_s"></p>
+<img src="https://raw.githubusercontent.com/Sam1511/Social_Graph_Project_Final_2016/master/webpageimages/department_fig.png" alt="color_netw_s"></p>
 
 <p>Overall departments can't be considered good communities, so the student has to think beyond his/her department when choosing courses.</p>
 
@@ -186,7 +186,7 @@ The particular analysis in this section is about identifying the interdisciplina
 With a few trick this was visualized using networkx</p>
 
 <p><em>The teachers network across departments:</em>
-<img src="https://github.com/Sam1511/Social_Graph_Project_Final_2016/blob/master/webpageimages/teacher_network.png" alt="teacher network"></p>
+<img src="https://raw.githubusercontent.com/Sam1511/Social_Graph_Project_Final_2016/master/webpageimages/teacher_network.png" alt="teacher network"></p>
 
 <p>At a first glance the network shows interesting results such as teachers being between networks and departments that are completely isolated(department of vetenarians). But as expected their a lot of interdisciplinary connections across departments. </p>
 
